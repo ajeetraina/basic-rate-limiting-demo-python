@@ -19,6 +19,7 @@ jobs:
       - run:
           name: Run web server
           command: |
+            cd ~
             python3 manage.py collectstatic
             python3 manage.py runserver
             
