@@ -7,13 +7,6 @@
 
 Show how the redis works with Python (Django).
 
-![Front example](https://github.com/redis-developer/basic-rate-limiting-demo-python/raw/master/docs/preview.png)
-
-# Overview video
-
-Here's a short video that explains the project and how it uses Redis:
-
-[![Watch the video on YouTube](https://github.com/redis-developer/basic-rate-limiting-demo-python/raw/master/docs/YTThumbnail.png)](https://www.youtube.com/watch?v=_mFWjk7ONa8)
 
 ## Try it out
 
@@ -33,35 +26,45 @@ Here's a short video that explains the project and how it uses Redis:
     <a href="https://deploy.cloud.run/?dir=google-cloud-run" target="_blank">
         <img src="https://deploy.cloud.run/button.svg" alt="Run on Google Cloud" width="200px"/>
     </a>
-    (See notes: How to run on Google Cloud)
+    
 </p>
 
 ## How to run on Google Cloud
 
-<p>
-    If you don't have redis yet, plug it in  (https://spring-gcp.saturnism.me/app-dev/cloud-services/cache/memorystore-redis).
-    After successful deployment, you need to manually enable the vpc connector as shown in the pictures:
-</p>
+###  1. Click "Run on Google Cloud" 
+        
+Open up the link under "Manage this application at Cloud Console"
 
-1. Open link google cloud console.
+![](https://raw.githubusercontent.com/redis-developer/basic-rate-limiting-demo-python/master/image1.jpg?v=2&s=2)
 
-![1 step](https://github.com/redis-developer/basic-rate-limiting-demo-python/raw/master/docs/1.png)
 
-2. Click "Edit and deploy new revision" button.
+        
+### 2. Click “Edit and Deploy New Revision”
+        
+![](https://raw.githubusercontent.com/redis-developer/basic-rate-limiting-demo-python/master/image2.jpg?v=2&s=2)
 
-![2 step](https://github.com/redis-developer/basic-rate-limiting-demo-python/raw/master/docs/2.png)
 
-3. Add environment.
+### 3. Click “Variables and Secrets” 
 
-![3 step](https://github.com/redis-developer/basic-rate-limiting-demo-python/raw/master/docs/3.png)
+Supply Redis Enterprise Cloud Endpoint URL
+        
+![](https://raw.githubusercontent.com/redis-developer/basic-rate-limiting-demo-python/master/image3.jpg?v=2&s=2)
+        
+### 4. Enable HTTP/2
+        
+Ensure that you have Redis Enterprise Cloud DB created under GCP.
+        
+![](https://raw.githubusercontent.com/redis-developer/basic-rate-limiting-demo-python/master/image_4.jpg?v=2&s=2)
 
-4.  Select vpc-connector and deploy application.
+### 5. Allow all the traffic
+        
+![](https://raw.githubusercontent.com/redis-developer/basic-rate-limiting-demo-python/master/image_5.jpg?v=2&s=2)
+        
+        
+Hence, you should be able to access Rate Limiting app
 
-![4  step](https://github.com/redis-developer/basic-rate-limiting-demo-python/raw/master/docs/4.png)
 
-<a href="https://github.com/GoogleCloudPlatform/cloud-run-button/issues/108#issuecomment-554572173">
-Problem with unsupported flags when deploying google cloud run button
-</a>
+![](https://raw.githubusercontent.com/redis-developer/basic-rate-limiting-demo-python/master/image_6.pjpg?v=2&s=2)
 
 ---
 
